@@ -18,16 +18,13 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
     /* Font variable */
-    @font-face {
-        font-family: "Dancing Script";
-        font-style: normal;
-        font-weight: 400 700;
-        src:
-            url("/fonts/variable/DancingScript-Variable.woff2") format("woff2"),
-            url("/fonts/variable/DancingScript-Variable.woff") format("woff"),
-            url("/fonts/variable/DancingScript-Variable.ttf") format("truetype");
-        font-display: swap;
-    }
+
+    /*
+    
+    Ruta   /fonts/variable
+    Nombre de fuentes: 
+        DancingScript-Variable
+    **/
 
     h1,
     h2 {
@@ -36,9 +33,11 @@ import Layout from "../layouts/Layout.astro";
 
     h2 {
         color: blue;
+        /*
         font-variation-settings: "wght" 400;
         text-align: center;
-        animation: fontWeightAnim 1s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        animation: fontWeightAnim 1s infinite alternate
+            cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
     }
 
     @keyframes fontWeightAnim {

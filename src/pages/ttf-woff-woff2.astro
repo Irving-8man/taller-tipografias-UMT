@@ -39,40 +39,20 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-    /* En public/fonts/ttf-woff-woff2 **/
+    /*
+    
+    Ruta   /fonts/ttf-woff-woff2 
+    Nombre de fuentes: 
+        OpenSans-Regular
+        OpenSans-SemiBold
+        OpenSans-SemiBoldItalic
+    **/
 
     /**Regular */
-    @font-face {
-        font-family: "OpenSans";
-        font-weight: normal;
-        font-style: normal;
-        src:
-            url("/fonts/versus/OpenSans-Regular.woff2") format("woff2"),
-            url("/fonts/versus/OpenSans-Regular.woff") format("woff"),
-            url("/fonts/versus/OpenSans-Regular.ttf") format("truetype");
-    }
 
     /* Semi Bold */
-    @font-face {
-        font-family: "OpenSans";
-        font-weight: 600;
-        font-style: normal;
-        src:
-            url("/fonts/versus/OpenSans-SemiBold.woff2") format("woff2"),
-            url("/fonts/versus/OpenSans-SemiBold.woff") format("woff"),
-            url("/fonts/versus/OpenSans-SemiBold.ttf") format("truetype");
-    }
 
     /* Semi Bold Italic */
-    @font-face {
-        font-family: "OpenSans";
-        font-weight: 600;
-        font-style: italic;
-        src:
-            url("/fonts/versus/OpenSans-SemiBoldItalic.woff2") format("woff2"),
-            url("/fonts/versus/OpenSans-SemiBoldItalic.woff") format("woff"),
-            url("/fonts/versus/OpenSans-SemiBoldItalic.ttf") format("truetype");
-    }
 
     .cargar__font {
         font-family: "OpenSans", sans-serif;
@@ -91,6 +71,5 @@ import Layout from "../layouts/Layout.astro";
         font-family: "OpenSans", sans-serif;
         font-weight: 600;
         font-style: italic;
-        /*font-synthesis:none;*/
     }
 </style>
