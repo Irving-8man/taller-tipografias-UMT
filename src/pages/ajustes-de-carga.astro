@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <main class="max-w-7xl mx-auto grid place-content-center min-h-[60vh]">
+        <div class="flex flex-col text-lg gap-5 ">
+            <section>
+                <h1>Capítulo 1: El Origen</h1>
+                <p>
+                    En un mundo donde los píxeles gobernaban, una joven
+                    tipografía llamada <span>"MysteryStory"</span> luchaba por ser
+                    cargada. Su diseño serif evocaba antiguos manuscritos, pero el
+                    navegador la mantenía oculta tras un FOIT interminable...
+                </p>
+            </section>
+
+            <section>
+                <h2>Capítulo 2: La Revelación</h2>
+                <p>
+                    Un héroe llamado <span>Roboto Bold</span> apareció usando. Con
+                    sus trazos sans-serif y pesos variables (400 para la calma, 700
+                    para el énfasis), trajo orden al caos del CLS.
+                </p>
+            </section>
+
+            <section>
+                <h2>Capítulo 3: El Futuro</h2>
+                <p>
+                    En las tierras variables, donde un solo archivo <span
+                        >WOFF2</span
+                    >
+                    contenía todos los pesos y estilos, yaxis: 100 900; slnt: -10
+                    0; la tipografía se adaptaba fluidamente como agua digital.
+                </p>
+            </section>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    /* En public/fonts/cargas **/
+
+    /**Regular */
+    @font-face {
+        font-family: "CormorantGaramond";
+        font-weight: normal;
+        font-style: normal;
+        src:
+            url("/fonts/cargas/CormorantGaramond-Regular.woff2") format("woff2"),
+            url("/fonts/cargas/CormorantGaramond-Regular.woff") format("woff"),
+            url("/fonts/cargas/CormorantGaramond-Regular.ttf")
+                format("truetype");
+        font-display: auto;
+        /**
+            font-display: block;
+            font-display: swap;
+            font-display: fallback;
+            font-display:optional;
+        */
+    }
+
+
+    .cargar__font{
+        font-family: "CormorantGaramond", "Times New Roman", Times, serif;
+    }
+
+    h1,
+    h2 {
+        font-family: "CormorantGaramond", "Times New Roman", Times, serif;
+        font-size: 30px;
+    }
+
+    p {
+        max-width: 50ch;
+    }
+</style>

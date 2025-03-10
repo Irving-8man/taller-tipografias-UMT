@@ -1,0 +1,88 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const PESOS = Array.from({ length: 9 }, (_, index) => (index + 1) * 100);
+---
+
+<Layout>
+	<main class="min-w-7xl flex flex-col justify-around mx-auto min-h-[60vh]">
+		<section class="flex justify-between text-5xl">
+			<h1>Serif</h1>
+			<h2>Sans-serif</h2>
+			<h3>Monospace</h3>
+			<h4>Cursive</h4>
+			<h5>Fantasy</h5>
+		</section>
+
+		<section class="mt-20 text-3xl">
+			<ul class="flex justify-between">
+				{PESOS.map((peso) => <li data-peso={peso}>{peso}</li>)}
+			</ul>
+		</section>
+
+		<section class="text-3xl">
+			<ul class="italicas flex justify-center gap-10">
+				<li>Italic</li>
+				<li>Oblicua</li>
+			</ul>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		font-family: serif;
+	}
+
+	h2 {
+		font-family: sans-serif;
+	}
+
+	h3 {
+		font-family: monospace;
+	}
+
+	h4 {
+		font-family: cursive;
+	}
+
+	h5 {
+		font-family: fantasy;
+	}
+
+	[data-peso="100"] {
+		font-weight: 100;
+	}
+	[data-peso="200"] {
+		font-weight: 200;
+	}
+	[data-peso="300"] {
+		font-weight: 300;
+	}
+	[data-peso="400"] {
+		font-weight: 400;
+	}
+	[data-peso="500"] {
+		font-weight: 500;
+	}
+	[data-peso="600"] {
+		font-weight: 600;
+	}
+	[data-peso="700"] {
+		font-weight: 700;
+	}
+	[data-peso="800"] {
+		font-weight: 800;
+	}
+	[data-peso="900"] {
+		font-weight: 900;
+	}
+
+
+	.italicas > li:first-child{
+		font-style: italic;
+	}
+	.italicas > li:nth-child(2){
+		font-style: oblique 50deg;
+	}
+</style>

@@ -1,0 +1,73 @@
+---
+const { pathname } = Astro.url;
+
+const normalized =
+    pathname.length > 1 && pathname.endsWith("/")
+        ? pathname.slice(0, -1)
+        : pathname;
+
+const PAGINAS = [
+    {
+        nombre: "Inicio",
+        url: "/",
+    },
+    {
+        nombre: "Fuentes base",
+        url: "/fuentes-base",
+    },
+    {
+        nombre: "TTF-WOFF-WOFF2",
+        url: "/ttf-woff-woff2",
+    },
+    {
+        nombre: "Ajustes de carga",
+        url: "/ajustes-de-carga",
+    },
+    {
+        nombre: "Unicode",
+        url: "/unicode",
+    },
+    {
+        nombre: "Google Fonts",
+        url: "/google-fonts",
+    },
+    {
+        nombre: "Fuentes Variables",
+        url: "/fuentes-variables",
+    }
+];
+
+const PAGINAS_ACTIVAS = PAGINAS.map((page) => ({
+    ...page,
+    activo: normalized === page.url,
+}));
+---
+
+<header class="min-w-7xl mx-auto pt-2">
+    <nav>
+        <ul class="flex justify-between text-sm w-full">
+            {
+                PAGINAS_ACTIVAS.map(({ activo, nombre, url }) => (
+                    <li>
+                        <a
+                            href={url}
+                            class:list={[
+                                "max-w-[20ch] text-wrap block text-center",
+                                {
+                                    "text-black underline decoration-wavy  decoration-red-600":
+                                        activo,
+                                },
+                                {
+                                    "hover:text-black text-gray-500  hover:underline hover:decoration-wavy":
+                                        !activo,
+                                },
+                            ]}
+                        >
+                            <span> {nombre}</span>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
+</header>

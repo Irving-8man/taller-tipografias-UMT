@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <main class="max-w-7xl mx-auto grid place-content-center min-h-[60vh]">
+        <div class="flex flex-col gap-10 text-7xl text-center">
+            <section>
+                <h1>Eso es todo amigos</h1>
+            </section>
+
+            <section class="h-[100px]">
+                <h2 id="rr">Nos vemos la proxima!!!</h2>
+            </section>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    /* Font variable */
+    @font-face {
+        font-family: "Dancing Script";
+        font-style: normal;
+        font-weight: 400 700;
+        src:
+            url("/fonts/variable/DancingScript-Variable.woff2") format("woff2"),
+            url("/fonts/variable/DancingScript-Variable.woff") format("woff"),
+            url("/fonts/variable/DancingScript-Variable.ttf") format("truetype");
+        font-display: swap;
+    }
+
+    h1,
+    h2 {
+        font-family: "Dancing Script", cursive;
+    }
+
+    h2 {
+        color: blue;
+        font-variation-settings: "wght" 400;
+        text-align: center;
+        animation: fontWeightAnim 1s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    @keyframes fontWeightAnim {
+        from {
+            font-variation-settings: "wght" 400;
+            color: red;
+            font-size: 75px;
+        }
+        to {
+            font-variation-settings: "wght" 700;
+            color: #055b81;
+            font-size: 80px;
+        }
+    }
+
+    p {
+        max-width: 50ch;
+    }
+</style>
