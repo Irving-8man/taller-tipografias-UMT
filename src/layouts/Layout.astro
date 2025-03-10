@@ -2,28 +2,10 @@
 import Header from "@/components/header.astro";
 import Footer from "@/components/footer.astro";
 import "@/styles/global.css";
-
-const animacion = {
-	old: {
-		name: "",
-		duration: ".6s",
-		easing: "ease-in",
-	},
-	new: {
-		name: "blup",
-		duration: ".6s",
-		easing: "ease-in-out",
-	},
-};
-
-const customTransition = {
-	forwards: animacion,
-	backwards: animacion,
-};
 ---
 
 <!doctype html>
-<html lang="es" transition:animate={customTransition}>
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
