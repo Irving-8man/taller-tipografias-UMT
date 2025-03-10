@@ -1,4 +1,4 @@
-# Taller: Cómo usar tipografias sin perder la cabeza
+# Taller: Cómo usar tipografías sin perder la cabeza
 
 ## 🚀 Estructura del proyecto
 
